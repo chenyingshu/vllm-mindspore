@@ -556,8 +556,9 @@ class Qwen2ForCausalLM(MsModelBase):
         return model_output
 
     def load_weights(self, weights: Iterable[Tuple[str, Tensor]]) -> Set[str]:
-        params_dict = self.get_params_dict()
-        self.model.load_weights(weights, params_dict)
+        # params_dict = self.get_params_dict()
+        # self.model.load_weights(weights, params_dict)
+        pass
 
     def sample(
         self, logits: Tensor, sampling_metadata: SamplingMetadata
